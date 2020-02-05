@@ -27,9 +27,8 @@ public class HelloController {
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
                         @RequestParam(name = "size", defaultValue = "5") Integer size) {
 
-
-        PaginationDTO list = questionService.list(page,size);
-        model.addAttribute("pagination", list);
+        PaginationDTO paginationDTO = questionService.list(page,size);
+        model.addAttribute("pagination", paginationDTO);
         return "index";
     }
 }
