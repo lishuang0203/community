@@ -1,22 +1,33 @@
 package community.study.life.community.mapper;
 
 import community.study.life.community.model.User;
-import org.apache.ibatis.annotations.*;
+import community.study.life.community.model.UserExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
 
-@Mapper
 public interface UserMapper {
-    @Insert("insert into user (account_id,name,token,gmt_create,gmt_modified,avatar_url) values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
-    void insert(User user);
+    int countByExample(UserExample example);
 
-    @Select("select * from user where token = #{token}")
-    User findByToken(@Param("token") String token);
+    int deleteByExample(UserExample example);
 
-    @Select("select * from user where id = #{id}")
-    User findById(@Param("id") Integer id);
+    int deleteByPrimaryKey(Long id);
 
-    @Select("select * from user where account_id = #{accountId}")
-    User findByAccountId(@Param("accountId") String accountId);
+    int insert(User record);
 
-    @Update("update user set name = #{name}, token =#{token}, gmt_modified=#{gmtModified},avatar_url=#{avatarUrl}")
-    void upDate(User user);
+    int insertSelective(User record);
+
+    List<User> selectByExampleWithRowbounds(UserExample example, RowBounds rowBounds);
+
+    List<User> selectByExample(UserExample example);
+
+    User selectByPrimaryKey(Long id);
+
+    int updateByExampleSelective(@Param("record") User record, @Param("example") UserExample example);
+
+    int updateByExample(@Param("record") User record, @Param("example") UserExample example);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }

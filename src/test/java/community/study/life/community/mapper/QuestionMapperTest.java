@@ -19,10 +19,10 @@ class QuestionMapperTest {
             question.setTitle("测试1" );
             question.setDescription("内容1");
             question.setTag("标签1");
-            question.setCreator(1);
+            question.setCreator(1L);
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
-            questionMapper.create(question);
+            questionMapper.insertSelective(question);
     }
 
 }

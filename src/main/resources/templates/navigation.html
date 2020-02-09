@@ -10,6 +10,15 @@
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
     <title>导航</title>
 </head>
+<script type="application/javascript">
+    window.onload= function (ev) {
+        var  closable = window.localStorage.getItem("closable");
+        if (closable == "true"){
+            window.close();
+            window.localStorage.removeItem("closable");
+        }
+    }
+</script>
 <body>
     <div th:insert="nav">
         <nav class="navbar navbar-default">

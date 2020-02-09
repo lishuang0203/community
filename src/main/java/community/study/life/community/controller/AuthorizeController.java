@@ -1,9 +1,7 @@
 package community.study.life.community.controller;
 
-import com.sun.org.apache.regexp.internal.RE;
 import community.study.life.community.dto.AccessTokenDTO;
 import community.study.life.community.dto.GithubUser;
-import community.study.life.community.mapper.UserMapper;
 import community.study.life.community.model.User;
 import community.study.life.community.provider.GithubProvider;
 import community.study.life.community.service.UserService;
