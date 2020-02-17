@@ -1,14 +1,8 @@
 package community.study.life.community.mapper;
 
 import community.study.life.community.model.Question;
-import community.study.life.community.service.QuestionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class QuestionMapperTest {
     @Autowired

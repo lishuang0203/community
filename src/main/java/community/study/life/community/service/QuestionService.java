@@ -10,13 +10,16 @@ import community.study.life.community.mapper.UserMapper;
 import community.study.life.community.model.Question;
 import community.study.life.community.model.QuestionExample;
 import community.study.life.community.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -48,8 +51,9 @@ public class QuestionService {
         //size *(page -1)
         Integer offset = size*(page-1);
 //        List<Question> questions = questionMapper.list(offset,size);
-
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(new QuestionExample(), new RowBounds(offset, size));
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.setOrderByClause("gmt_create desc");
+        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
         List<QuestionDTO> questionDTOS = new ArrayList<>();
 
 
@@ -60,7 +64,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOS.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOS(questionDTOS);
+        paginationDTO.setData(questionDTOS);
         return paginationDTO;
     }
 
@@ -92,7 +96,6 @@ public class QuestionService {
         QuestionExample example = new QuestionExample();
         example.createCriteria().andCreatorEqualTo(userId);
         List<Question> questions = questionMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
-
         List<QuestionDTO> questionDTOS = new ArrayList<>();
 
         for (Question question : questions) {
@@ -102,7 +105,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOS.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOS(questionDTOS);
+        paginationDTO.setData(questionDTOS);
         return paginationDTO;
     }
 
@@ -157,5 +160,25 @@ public class QuestionService {
         question.setViewCount(1);
         questionExMapper.incView(question);
 
+    }
+
+    public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
+
+        if (StringUtils.isBlank(queryDTO.getTag())){
+            return  new ArrayList<>();
+        }
+        String[] tags = StringUtils.split(queryDTO.getTag(), ",");
+        String regexp = Arrays.stream(tags).collect(Collectors.joining("|"));
+        Question question = new Question();
+        question.setId(queryDTO.getId());
+        question.setTag(regexp);
+
+        List<Question> questions = questionExMapper.selectRelated(question);
+        List<QuestionDTO> questionDTOS = questions.stream().map(q -> {
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(q,questionDTO);
+            return questionDTO;
+        }).collect(Collectors.toList());Collectors.toList();
+        return questionDTOS;
     }
 }

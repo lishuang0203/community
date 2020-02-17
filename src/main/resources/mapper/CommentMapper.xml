@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="community.study.life.community.mapper.CommentMapper" >
-  <resultMap id="BaseResultMap" type="community.study.life.community.model.Comment" >
-    <constructor >
-      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="parent_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <arg column="commentor" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="gmt_create" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="gmt_modified" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="like_count" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="content" jdbcType="VARCHAR" javaType="java.lang.String" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community.study.life.community.mapper.CommentMapper">
+  <resultMap id="BaseResultMap" type="community.study.life.community.model.Comment">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="parent_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="type" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="commentor" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="gmt_create" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="gmt_modified" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="like_count" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <arg column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="comment_count" javaType="java.lang.Integer" jdbcType="INTEGER" />
     </constructor>
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -42,25 +43,25 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -71,141 +72,152 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Base_Column_List" >
-    id, parent_id, type, commentor, gmt_create, gmt_modified, like_count, content
+  <sql id="Base_Column_List">
+    id, parent_id, type, commentor, gmt_create, gmt_modified, like_count, content, comment_count
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="community.study.life.community.model.CommentExample" >
+  <select id="selectByExample" parameterType="community.study.life.community.model.CommentExample" resultMap="BaseResultMap">
     select
-    <if test="distinct" >
+    <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
     from comment
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null" >
+    <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from comment
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from comment
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="community.study.life.community.model.CommentExample" >
+  <delete id="deleteByExample" parameterType="community.study.life.community.model.CommentExample">
     delete from comment
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="community.study.life.community.model.Comment" >
+  <insert id="insert" parameterType="community.study.life.community.model.Comment">
     insert into comment (id, parent_id, type, 
       commentor, gmt_create, gmt_modified, 
-      like_count, content)
+      like_count, content, comment_count
+      )
     values (#{id,jdbcType=BIGINT}, #{parentId,jdbcType=BIGINT}, #{type,jdbcType=INTEGER}, 
       #{commentor,jdbcType=BIGINT}, #{gmtCreate,jdbcType=BIGINT}, #{gmtModified,jdbcType=BIGINT}, 
-      #{likeCount,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR})
+      #{likeCount,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR}, #{commentCount,jdbcType=INTEGER}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="community.study.life.community.model.Comment" >
+  <insert id="insertSelective" parameterType="community.study.life.community.model.Comment">
     insert into comment
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="parentId != null" >
+      <if test="parentId != null">
         parent_id,
       </if>
-      <if test="type != null" >
+      <if test="type != null">
         type,
       </if>
-      <if test="commentor != null" >
+      <if test="commentor != null">
         commentor,
       </if>
-      <if test="gmtCreate != null" >
+      <if test="gmtCreate != null">
         gmt_create,
       </if>
-      <if test="gmtModified != null" >
+      <if test="gmtModified != null">
         gmt_modified,
       </if>
-      <if test="likeCount != null" >
+      <if test="likeCount != null">
         like_count,
       </if>
-      <if test="content != null" >
+      <if test="content != null">
         content,
       </if>
+      <if test="commentCount != null">
+        comment_count,
+      </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="parentId != null" >
+      <if test="parentId != null">
         #{parentId,jdbcType=BIGINT},
       </if>
-      <if test="type != null" >
+      <if test="type != null">
         #{type,jdbcType=INTEGER},
       </if>
-      <if test="commentor != null" >
+      <if test="commentor != null">
         #{commentor,jdbcType=BIGINT},
       </if>
-      <if test="gmtCreate != null" >
+      <if test="gmtCreate != null">
         #{gmtCreate,jdbcType=BIGINT},
       </if>
-      <if test="gmtModified != null" >
+      <if test="gmtModified != null">
         #{gmtModified,jdbcType=BIGINT},
       </if>
-      <if test="likeCount != null" >
+      <if test="likeCount != null">
         #{likeCount,jdbcType=BIGINT},
       </if>
-      <if test="content != null" >
+      <if test="content != null">
         #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="commentCount != null">
+        #{commentCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="community.study.life.community.model.CommentExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="community.study.life.community.model.CommentExample" resultType="java.lang.Integer">
     select count(*) from comment
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map" >
+  <update id="updateByExampleSelective" parameterType="map">
     update comment
-    <set >
-      <if test="record.id != null" >
+    <set>
+      <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.parentId != null" >
+      <if test="record.parentId != null">
         parent_id = #{record.parentId,jdbcType=BIGINT},
       </if>
-      <if test="record.type != null" >
+      <if test="record.type != null">
         type = #{record.type,jdbcType=INTEGER},
       </if>
-      <if test="record.commentor != null" >
+      <if test="record.commentor != null">
         commentor = #{record.commentor,jdbcType=BIGINT},
       </if>
-      <if test="record.gmtCreate != null" >
+      <if test="record.gmtCreate != null">
         gmt_create = #{record.gmtCreate,jdbcType=BIGINT},
       </if>
-      <if test="record.gmtModified != null" >
+      <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=BIGINT},
       </if>
-      <if test="record.likeCount != null" >
+      <if test="record.likeCount != null">
         like_count = #{record.likeCount,jdbcType=BIGINT},
       </if>
-      <if test="record.content != null" >
+      <if test="record.content != null">
         content = #{record.content,jdbcType=VARCHAR},
       </if>
+      <if test="record.commentCount != null">
+        comment_count = #{record.commentCount,jdbcType=INTEGER},
+      </if>
     </set>
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByExample" parameterType="map" >
+  <update id="updateByExample" parameterType="map">
     update comment
     set id = #{record.id,jdbcType=BIGINT},
       parent_id = #{record.parentId,jdbcType=BIGINT},
@@ -214,39 +226,43 @@
       gmt_create = #{record.gmtCreate,jdbcType=BIGINT},
       gmt_modified = #{record.gmtModified,jdbcType=BIGINT},
       like_count = #{record.likeCount,jdbcType=BIGINT},
-      content = #{record.content,jdbcType=VARCHAR}
-    <if test="_parameter != null" >
+      content = #{record.content,jdbcType=VARCHAR},
+      comment_count = #{record.commentCount,jdbcType=INTEGER}
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="community.study.life.community.model.Comment" >
+  <update id="updateByPrimaryKeySelective" parameterType="community.study.life.community.model.Comment">
     update comment
-    <set >
-      <if test="parentId != null" >
+    <set>
+      <if test="parentId != null">
         parent_id = #{parentId,jdbcType=BIGINT},
       </if>
-      <if test="type != null" >
+      <if test="type != null">
         type = #{type,jdbcType=INTEGER},
       </if>
-      <if test="commentor != null" >
+      <if test="commentor != null">
         commentor = #{commentor,jdbcType=BIGINT},
       </if>
-      <if test="gmtCreate != null" >
+      <if test="gmtCreate != null">
         gmt_create = #{gmtCreate,jdbcType=BIGINT},
       </if>
-      <if test="gmtModified != null" >
+      <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=BIGINT},
       </if>
-      <if test="likeCount != null" >
+      <if test="likeCount != null">
         like_count = #{likeCount,jdbcType=BIGINT},
       </if>
-      <if test="content != null" >
+      <if test="content != null">
         content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="commentCount != null">
+        comment_count = #{commentCount,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="community.study.life.community.model.Comment" >
+  <update id="updateByPrimaryKey" parameterType="community.study.life.community.model.Comment">
     update comment
     set parent_id = #{parentId,jdbcType=BIGINT},
       type = #{type,jdbcType=INTEGER},
@@ -254,21 +270,23 @@
       gmt_create = #{gmtCreate,jdbcType=BIGINT},
       gmt_modified = #{gmtModified,jdbcType=BIGINT},
       like_count = #{likeCount,jdbcType=BIGINT},
-      content = #{content,jdbcType=VARCHAR}
+      content = #{content,jdbcType=VARCHAR},
+      comment_count = #{commentCount,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <select resultMap="BaseResultMap" parameterType="community.study.life.community.model.CommentExample" id="selectByExampleWithRowbounds" >
+  <select id="selectByExampleWithRowbounds" parameterType="community.study.life.community.model.CommentExample" resultMap="BaseResultMap">
     select
-    <if test="distinct" >
+    <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
     from comment
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null" >
+    <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
   </select>
+
 </mapper>
