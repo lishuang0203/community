@@ -15,9 +15,7 @@ public class User {
 
     private String avatarUrl;
 
-    private String bio;
-
-    public User(Long id, String accountId, String name, String token, Long gmtCreate, Long gmtModified, String avatarUrl, String bio) {
+    public User(Long id, String accountId, String name, String token, Long gmtCreate, Long gmtModified, String avatarUrl) {
         this.id = id;
         this.accountId = accountId;
         this.name = name;
@@ -25,7 +23,6 @@ public class User {
         this.gmtCreate = gmtCreate;
         this.gmtModified = gmtModified;
         this.avatarUrl = avatarUrl;
-        this.bio = bio;
     }
 
     public User() {
@@ -86,13 +83,5 @@ public class User {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl == null ? null : avatarUrl.trim();
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio == null ? null : bio.trim();
     }
 }

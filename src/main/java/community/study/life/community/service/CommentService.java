@@ -64,7 +64,7 @@ public class CommentService {
             parentComment.setCommentCount(1);
            commentExtMapper.incCommentCount(parentComment);
            //创建通知
-            createNotify(comment, dbComment.getCommentor(), commentor.getName(), commentor.getName(), NotificationTypeEnum.REPLY_QUESTION, comment.getParentId());
+            createNotify(comment, dbComment.getCommentor(), commentor.getName(), question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, comment.getParentId());
 
         } else {
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
