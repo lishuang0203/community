@@ -5,7 +5,7 @@
         <constructor>
             <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
             <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String"/>
-            <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="description" jdbcType="LONGVARCHAR" javaType="java.lang.String"/>
             <arg column="tag" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="gmt_create" jdbcType="BIGINT" javaType="java.lang.Long"/>
             <arg column="gmt_modified" jdbcType="BIGINT" javaType="java.lang.Long"/>

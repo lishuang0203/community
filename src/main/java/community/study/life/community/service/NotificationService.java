@@ -32,7 +32,6 @@ public class NotificationService {
         NotificationExample notificationExample = new NotificationExample();
         notificationExample.createCriteria().andReceiverEqualTo(id);
         Integer totalCount = (int)notificationMapper.countByExample(notificationExample);
-
         if (totalCount % size == 0){
             totalPage = totalCount / size;
         }
@@ -42,7 +41,6 @@ public class NotificationService {
         if(page<1){
             page=1;
         }
-
         if (page>totalPage){
             page = totalPage;
         }
@@ -66,17 +64,15 @@ public class NotificationService {
             notificationDTOS.add(notificationDTO);
         }
 
-
-
         paginationDTO.setData(notificationDTOS);
         return paginationDTO;
     }
 
-    public int unreadCount(Long userId) {
+    public Long unreadCount(Long userId) {
         NotificationExample notificationExample = new NotificationExample();
         notificationExample.createCriteria().andReceiverEqualTo(userId)
         .andStatusEqualTo(NotificationStatusEnum.UNREAD.getStatus());
-        return notificationMapper.countByExample(notificationExample);
+        return Long.valueOf(notificationMapper.countByExample(notificationExample));
     }
 
     public NotificationDTO read(Long id, User user) {

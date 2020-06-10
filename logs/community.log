@@ -1,0 +1,201 @@
+2020-06-10 19:21:50.901  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-2G32URA with PID 9264 (D:\spring\community\target\classes started by Moro in D:\spring\community)
+2020-06-10 19:21:50.905  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-06-10 19:21:50.963  INFO 9264 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\localRespository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/localRespository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-06-10 19:21:50.965  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-10 19:21:50.965  INFO 9264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-10 19:21:51.701  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:21:51.702  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-10 19:21:51.737  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 JDBC repository interfaces.
+2020-06-10 19:21:51.752  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:21:51.752  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-10 19:21:51.768  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JPA repository interfaces.
+2020-06-10 19:21:52.253  INFO 9264 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 19:21:52.639  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-10 19:21:52.649  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 19:21:52.650  INFO 9264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-06-10 19:21:52.652  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-06-10 19:21:52.652  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-10 19:21:52.653  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-10 19:21:52.656  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-06-10 19:21:52.755  INFO 9264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 19:21:52.755  INFO 9264 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1789 ms
+2020-06-10 19:21:52.934  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-10 19:21:53.450  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-10 19:21:53.506  INFO 9264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-10 19:21:53.822  INFO 9264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-06-10 19:21:53.992  INFO 9264 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-10 19:21:54.125  INFO 9264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-10 19:21:54.307  INFO 9264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-10 19:21:54.315  INFO 9264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 19:21:54.751  WARN 9264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-10 19:21:54.880  INFO 9264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 19:21:54.949  INFO 9264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-10 19:21:55.178  INFO 9264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-10 19:21:55.241  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-10 19:21:55.244  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Started CommunityApplication in 4.747 seconds (JVM running for 6.663)
+2020-06-10 19:22:13.295  INFO 9264 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 19:22:13.296  INFO 9264 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 19:22:13.299  INFO 9264 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-10 19:22:13.303  INFO 9264 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-10 19:22:14.226  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-2G32URA with PID 9264 (D:\spring\community\target\classes started by Moro in D:\spring\community)
+2020-06-10 19:22:14.226  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-06-10 19:22:14.422  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:22:14.423  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-10 19:22:14.430  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
+2020-06-10 19:22:14.434  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:22:14.434  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-10 19:22:14.441  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JPA repository interfaces.
+2020-06-10 19:22:14.500  INFO 9264 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 19:22:14.568  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-10 19:22:14.569  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 19:22:14.570  INFO 9264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-06-10 19:22:14.570  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-06-10 19:22:14.570  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-10 19:22:14.571  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-10 19:22:14.571  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-06-10 19:22:14.594  INFO 9264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 19:22:14.594  INFO 9264 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 365 ms
+2020-06-10 19:22:14.632  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-06-10 19:22:14.640  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-06-10 19:22:14.646  INFO 9264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-10 19:22:14.649  INFO 9264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-10 19:22:14.666  INFO 9264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-10 19:22:14.666  INFO 9264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 19:22:14.830  WARN 9264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-10 19:22:14.876  INFO 9264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 19:22:14.900  INFO 9264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-10 19:22:15.007  INFO 9264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-10 19:22:15.020  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-10 19:22:15.021  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Started CommunityApplication in 0.829 seconds (JVM running for 26.441)
+2020-06-10 19:22:15.022  INFO 9264 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-10 19:23:21.716  INFO 9264 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-10 19:23:21.717  INFO 9264 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 19:23:21.718  INFO 9264 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-06-10 19:23:21.723  INFO 9264 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-06-10 19:23:22.627  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Starting CommunityApplication on DESKTOP-2G32URA with PID 9264 (D:\spring\community\target\classes started by Moro in D:\spring\community)
+2020-06-10 19:23:22.627  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : No active profile set, falling back to default profiles: default
+2020-06-10 19:23:22.873  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:23:22.873  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-10 19:23:22.887  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JDBC repository interfaces.
+2020-06-10 19:23:22.892  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-10 19:23:22.893  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-10 19:23:22.897  INFO 9264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 JPA repository interfaces.
+2020-06-10 19:23:23.032  INFO 9264 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 19:23:23.113  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-06-10 19:23:23.114  INFO 9264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-10 19:23:23.114  INFO 9264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-06-10 19:23:23.114  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-06-10 19:23:23.114  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-10 19:23:23.114  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-10 19:23:23.115  INFO 9264 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-06-10 19:23:23.136  INFO 9264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 19:23:23.136  INFO 9264 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 505 ms
+2020-06-10 19:23:23.173  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-06-10 19:23:23.178  INFO 9264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-06-10 19:23:23.185  INFO 9264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-10 19:23:23.190  INFO 9264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-10 19:23:23.203  INFO 9264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-10 19:23:23.203  INFO 9264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-10 19:23:23.537  WARN 9264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-10 19:23:23.653  INFO 9264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-10 19:23:23.686  INFO 9264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-10 19:23:23.858  INFO 9264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-10 19:23:23.884  INFO 9264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-06-10 19:23:23.886  INFO 9264 --- [restartedMain] c.s.life.community.CommunityApplication  : Started CommunityApplication in 1.284 seconds (JVM running for 95.306)
+2020-06-10 19:23:23.892  INFO 9264 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-06-10 19:23:32.571  INFO 9264 --- [http-nio-8887-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-10 19:23:32.572  INFO 9264 --- [http-nio-8887-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-10 19:23:32.581  INFO 9264 --- [http-nio-8887-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-06-10 19:23:32.637 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:32.652 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:32.659 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:32.666 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:32.666 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:32.667 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:32.738 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectByPrimaryKey           : ==>  Preparing: select id, title, description, tag, gmt_create, gmt_modified, creator, view_count, comment_count, like_count from question where id = ? 
+2020-06-10 19:23:32.738 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectByPrimaryKey           : ==> Parameters: 35(Long)
+2020-06-10 19:23:32.739 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectByPrimaryKey           : <==      Total: 1
+2020-06-10 19:23:32.746 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user where id = ? 
+2020-06-10 19:23:32.746 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-06-10 19:23:32.747 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-06-10 19:23:32.751 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectRelated                : ==>  Preparing: select * from QUESTION where id !=? and tag regexp ? 
+2020-06-10 19:23:32.751 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectRelated                : ==> Parameters: 35(Long), java(String)
+2020-06-10 19:23:32.752 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.Q.selectRelated                : <==      Total: 0
+2020-06-10 19:23:32.760 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.CommentMapper.selectByExample  : ==>  Preparing: select id, parent_id, type, commentor, gmt_create, gmt_modified, like_count, content, comment_count from comment WHERE ( parent_id = ? and type = ? ) order by gmt_create desc 
+2020-06-10 19:23:32.761 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.CommentMapper.selectByExample  : ==> Parameters: 35(Long), 1(Integer)
+2020-06-10 19:23:32.768 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.CommentMapper.selectByExample  : <==      Total: 0
+2020-06-10 19:23:32.769 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.mapper.QuestionExMapper.incView  : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id = ? 
+2020-06-10 19:23:32.769 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.mapper.QuestionExMapper.incView  : ==> Parameters: 1(Integer), 35(Long)
+2020-06-10 19:23:32.771 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.mapper.QuestionExMapper.incView  : <==    Updates: 1
+2020-06-10 19:23:33.279 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.280 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.280 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.280 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.280 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.280 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.281 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.281 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.281 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.281 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.281 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.282 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.283 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.284 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.284 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.284 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.284 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.284 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-4] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-9] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.285 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.286 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.286 DEBUG 9264 --- [http-nio-8887-exec-1] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.286 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.286 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.287 DEBUG 9264 --- [http-nio-8887-exec-10] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.307 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.307 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.308 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.308 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.308 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.308 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.308 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.310 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-8] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-2] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.311 DEBUG 9264 --- [http-nio-8887-exec-3] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.312 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.312 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.312 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.312 DEBUG 9264 --- [http-nio-8887-exec-5] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.312 DEBUG 9264 --- [http-nio-8887-exec-6] c.s.l.c.m.N.countByExample               : <==      Total: 1
+2020-06-10 19:23:33.405 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, avatar_url from user WHERE ( token = ? ) 
+2020-06-10 19:23:33.405 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : ==> Parameters: 053e029c-3148-4a56-8ba2-9d9e0a7d8812(String)
+2020-06-10 19:23:33.405 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.UserMapper.selectByExample     : <==      Total: 1
+2020-06-10 19:23:33.406 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
+2020-06-10 19:23:33.407 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : ==> Parameters: 3(Long), 0(Integer)
+2020-06-10 19:23:33.408 DEBUG 9264 --- [http-nio-8887-exec-7] c.s.l.c.m.N.countByExample               : <==      Total: 1

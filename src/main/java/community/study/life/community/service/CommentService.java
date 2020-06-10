@@ -74,15 +74,19 @@ public class CommentService {
             }
             //回复问题
             //④问题评论成功并且评论数+1
+            comment.setCommentCount(0);
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionExMapper.incCommentCount(question);
             //创建通知
-            createNotify(comment,question.getCreator(),commentor.getName(),question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
+            createNotify(comment,question.getCreator(),  commentor.getName(), question.getTitle(),NotificationTypeEnum.REPLY_COMMENT, question.getId());
         }
     }
 
-    private void createNotify(Comment comment, Long receiver, String outerTitle, String notifierName, NotificationTypeEnum notificationTypeEnum, Long outerId) {
+    private void createNotify(Comment comment, Long receiver, String notifierName, String outerTitle, NotificationTypeEnum notificationTypeEnum, Long outerId) {
+        if (receiver == comment.getCommentor()){
+            return;
+        }
         Notification notification = new Notification();
         notification.setOuterId(outerId);
         notification.setNotifier(comment.getCommentor());
@@ -108,7 +112,7 @@ public class CommentService {
         commentExample.createCriteria()
                 .andParentIdEqualTo(id)
                 .andTypeEqualTo(type.getType());
-        commentExample.setOrderByClause("gmt_create desc");
+        commentExample.setOrderByClause("gmt_create desc");//按时间倒序排序
         List<Comment> comments = commentMapper.selectByExample(commentExample);
 
         if (comments.size() == 0) {

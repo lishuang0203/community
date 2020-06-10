@@ -10,9 +10,10 @@
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
 </head>
 <script type="application/javascript">
+    //debugger;//前端debug
     window.onload= function () {
-        var  closable = window.localStorage.getItem("closable");
-        if (closable == "true"){
+        var  closable = window.localStorage.getItem("closable");//校验
+        if (closable == "true"){//取出类型是String类型
             window.close();
             window.localStorage.removeItem("closable");
         }
@@ -27,13 +28,12 @@
             <hr>
             <div class="media" th:each="question : ${pagination.data}">
                 <div class="media-left">
-                        <img class="media-object img-rounded" th:src="${question.user?.avatarUrl}" />
+                        <img class="media-object img-rounded" th:src="${question.user.avatarUrl}" />
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading" >
                         <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                     </h4>
-                    <span th:text="${question.description}"></span>
                     <br>
                   <span class="text-color">
                       <span th:text="${question.commentCount}"></span>个回复 •<span
@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li th:if="${pagination.showPrevious}">
-                        <a th:href="@{/(page=${pagination.page - 1})}"
+                        <a th:href="@{/(page=${pagination.page != 0 ?pagination.page - 1:1})}"
                            aria-label="Previous">
                             <span aria-hidden="true">&lt;</span>
                         </a>
@@ -79,5 +79,6 @@
         </div>
     </div>
 </div>
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>

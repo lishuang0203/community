@@ -18,7 +18,6 @@ public class NotificationController {
     @GetMapping("/notification/{id}")
     public String profile(HttpServletRequest request,
                           @PathVariable(name = "id") Long id) {
-
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             return "redirect:/";

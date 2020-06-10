@@ -30,7 +30,7 @@ function comment2target(targetId, type, content) {
                     var isAccepted = confirm(response.message);
                     if (isAccepted) {
                         window.open("https://github.com/login/oauth/authorize?client_id=084488a7b311fcc0f1a6&redirect_uri=http://localhost:8887/callback&scope=user&state=1");
-                        window.localStorage.setItem("closable", true);
+                        window.localStorage.setItem("closable", true);//页面无法传递元素，通过存储到浏览器传递
                     }
                 } else {
                     alert(response.message);
